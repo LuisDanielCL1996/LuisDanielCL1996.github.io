@@ -11,6 +11,11 @@ router.get('/upload', (req,res) => {
 	//ruta para mostrar la imagen ya cargada
 });
 
+router.get('/', (req,res) => {
+	res.render('index');
+	//ruta para mostrar la imagen ya cargada
+});
+
 router.post('/upload', async (req,res) => { 
 	const image = new Image();
 	image.title = req.body.title;
