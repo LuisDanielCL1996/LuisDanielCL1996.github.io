@@ -10,6 +10,8 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const flash = require('connect-flash');
 const passport = require('passport');
 
+const mongoose = require ('mongoose');
+const bcrypt = require('bcryptjs'); 
 const AdminBro = require('admin-bro');
 const AdminBroExpress = require('@admin-bro/express');
 AdminBro.registerAdapter(require('@admin-bro/mongoose'));
@@ -17,12 +19,75 @@ AdminBro.registerAdapter(require('@admin-bro/mongoose'));
 // Initialiazations
 const app = express();
 
-require('./database');
-require('./config/passport');
 
 const Note = require('./models/Note');
 const User = require('./models/User');
-const Image = require('./models/Image');
+//const Image = require('./models/Image');
+//const Admin = require('./models/admin');
+// Resources definitions
+const Admin = mongoose.model('Admin', {
+  email: { type: String, required: true },
+  encryptedPassword: { type: String, required: true },
+  role: { type: String, enum: ['admin', 'restricted'], required: true },
+})
+
+const adminBro = new AdminBro({
+  resources: 
+  [
+	  {resource: Admin,
+	  	options: {
+      properties: {
+        encryptedPassword: {
+          isVisible: false,
+        },
+        password: {
+          type: 'string',
+          isVisible: {
+            list: false, edit: true, filter: false, show: false,
+          },
+        },
+      },
+      actions: {
+        new: {
+          before: async (request) => {
+            if(request.payload.password) {
+              request.payload = {
+                ...request.payload,
+                encryptedPassword: await bcrypt.hash(request.payload.password, 10),
+                password: undefined,
+              }
+            }
+            return request
+          },
+        }
+      }
+    }
+	  },
+	  {resource: User},
+	  {resource: Note},
+  ],
+  rootPath: '/admin',
+})
+const routerUser = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
+  authenticate: async (email, password) => {
+    const admin = await Admin.findOne({ email })
+    if (admin) {
+      const matched = await bcrypt.compare(password, admin.encryptedPassword)
+      if (matched) {
+        return admin
+      }
+    }
+    return false
+  },
+  cookiePassword: 'some-secret-password-used-to-secure-cookie',
+});
+app.use(adminBro.options.rootPath, routerUser);
+
+require('./database');
+require('./config/passport');
+//require('./config/AdminBro');
+
+
 // Settings    (aqui van todas las configuraciones, Sherlock)
 app.set('port', process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
@@ -38,16 +103,11 @@ app.engine('.hbs',exphbs({  //se le declara un objeto de configuracion en "exphb
 }));
 app.set('view engine','.hbs');
 
-// Middlewares (todas las funciones que seran ejecutadas antes de llegar al servidor)
-const adminBro = new AdminBro({
-  resources: [
-  	{resource: User},
-  	{resource: Note},
-  	{resource: Image},
-  ], 
 
- 	rootPath: '/admin',
-});
+
+
+// Middlewares (todas las funciones que seran ejecutadas antes de llegar al servidor)
+
 
 app.use(express.urlencoded({extended: false})); 
 const storage = multer.diskStorage({
@@ -82,8 +142,6 @@ app.use(require('./routes/notes'));
 app.use(require('./routes/users'));
 app.use(require('./routes/admin-upload'));
 
-const routerUser = AdminBroExpress.buildRouter(adminBro);
-app.use(adminBro.options.rootPath, routerUser);
 
 // Static Files
 app.use(express.static(path.join(__dirname,'public')));

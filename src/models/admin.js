@@ -2,7 +2,7 @@ const mongoose = require ('mongoose');
 const { Schema } = mongoose; //creando un schema de datos para poder utilizarlo
 const bcrypt = require('bcryptjs'); 
 
-const UserSchema = new Schema({
+const AdminSchema = new Schema({
 	name: {type: String, required: true},
 	email: {type: String, required: true},
 	password: {type: String, required: true},
@@ -10,7 +10,7 @@ const UserSchema = new Schema({
 });
 
 //este metodo nos permite cifrar la password
-UserSchema.methods.encryptPassword =  async (password) => { 
+AdminSchema.methods.encryptPassword =  async (password) => { 
 	const salt = await bcrypt.genSalt(10); //se genera un Hash
 	 //se aplica 10 veces el algoritmo de encriptacion (es lo comun 10)
 	 const hash = bcrypt.hash(password,salt);
@@ -19,8 +19,8 @@ UserSchema.methods.encryptPassword =  async (password) => {
 
 
 //este metodo compara las password del login del usuario con la de la DB
-UserSchema.methods.matchPassword =  async function (password){
+AdminSchema.methods.matchPassword =  async function (password){
 	return  await bcrypt.compare(password, this.password);
 };
 
-module.exports = mongoose.model('User',UserSchema);
+module.exports = mongoose.model('Admin',AdminSchema);

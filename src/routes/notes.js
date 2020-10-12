@@ -4,7 +4,7 @@ const router = express.Router();
 const Note = require('../models/Note'); //Para manipular la DB
 const { isAuthenticated } = require('../helpers/auth');
 
-router.get('/notes/add',isAuthenticated, (req,res) => {
+router.get('/notes/add', isAuthenticated, (req,res) => {
 	res.render('notes/new-note');
 }); 
 
