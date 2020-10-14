@@ -2,7 +2,7 @@ const express = require('express');//objeto que me facilitara la creacion de rut
 const router = express.Router();
 
 const Image = require('../models/Image');
-
+const fs = require('fs-extra');
 
 
 
@@ -11,8 +11,10 @@ router.get('/upload', (req,res) => {
 	//ruta para mostrar la imagen ya cargada
 });
 
-router.get('/', (req,res) => {
-	res.render('index');
+router.get('/', async (req,res) => {
+
+	const image = await Image.find();
+	res.render('index',{image});
 	//ruta para mostrar la imagen ya cargada
 });
 
@@ -27,7 +29,7 @@ router.post('/upload', async (req,res) => {
 	image.size = req.file.size;
 	
 	await image.save();
-
+	//await fs.unlink(req.file.path);
 	res.redirect('/');
 	
 	//ruta para guardar la imagen

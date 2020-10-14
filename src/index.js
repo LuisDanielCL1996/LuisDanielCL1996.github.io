@@ -21,6 +21,16 @@ AdminBro.registerAdapter(require("@admin-bro/mongoose"));
 // Initialiazations
 const app = express();
 
+const hbs = exphbs.create({
+  helpers: {
+    paramImg: function (imageDB) {
+	  if (imageDB.title == "member.01") return imageDB.path;
+	  
+      else return "/img/member-02.jpg";
+    },
+  },
+});
+
 const Note = require("./models/Note");
 const User = require("./models/User");
 //const Image = require('./models/Image');
