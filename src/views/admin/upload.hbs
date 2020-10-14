@@ -3,7 +3,8 @@
 		<div class="col-md-4 offset-md-4">
 			<div class="card">
 				<div class="card-body">
-					<form action="/upload" method="POST" enctype="multipart/form-data">
+					<form action="/upload/edit-img/{{image._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+					<input type="hidden" name="_method" value="PUT">
 						<div class="input-group mb-3">
 						    <div class="custom-file">
 						    	<input type="file" name="image" class="custom-file-input" id="inputGroupFile02">

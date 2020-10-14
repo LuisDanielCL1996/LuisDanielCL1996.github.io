@@ -4,9 +4,22 @@ const router = express.Router();
 const Image = require("../models/Image");
 const fs = require("fs-extra");
 
-router.get("/upload", (req, res) => {
-  res.render("admin/upload");
+router.get("/upload", async (req, res) => {
+  const image = await Image.find();
+  res.render("admin",{image});
   //ruta para mostrar la imagen ya cargada
+});
+
+router.get('/upload/edit/:id', async (req,res) => {
+	const image = await Image.findById(req.params.id);
+	res.render('admin/upload',{image});
+});
+router.put('/upload/edit-img/:id', async (req,res) => {
+  const { title, description } = req.body;
+  const path = "/img/uploads/" + req.file.filename;
+	await Image.findByIdAndUpdate(req.params.id, {title, description, path});
+	req.flash('success_msg', 'Image Updated Succesfully');
+	res.redirect('/');	
 });
 
 router.get("/", async (req, res) => {
