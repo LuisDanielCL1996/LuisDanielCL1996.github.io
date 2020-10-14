@@ -21,16 +21,6 @@ AdminBro.registerAdapter(require("@admin-bro/mongoose"));
 // Initialiazations
 const app = express();
 
-const hbs = exphbs.create({
-  helpers: {
-    paramImg: function (imageDB) {
-	  if (imageDB.title == "member.01") return imageDB.path;
-	  
-      else return "/img/member-02.jpg";
-    },
-  },
-});
-
 const Note = require("./models/Note");
 const User = require("./models/User");
 //const Image = require('./models/Image');
@@ -109,18 +99,118 @@ app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "views"));
 //el metodo join me permite unir directorios (le dice a node donde esta la carpeta views)
 //devuelve la ruta de donde se esta ejecutando determinado archivo
-app.engine(
-  ".hbs",
-  exphbs({
-    //se le declara un objeto de configuracion en "exphbs"
-    handlebars: allowInsecurePrototypeAccess(Handlebars),
-    defaultLayaout: "main",
-    //todas estas configuraciones hacen una vista por default en todas las vistas
-    layoutsDir: path.join(app.get("views"), "layouts"),
-    partialDir: path.join(app.get("views"), "partials"),
-    extname: ".hbs",
-  })
-);
+const hbs = exphbs.create({
+  //se le declara un objeto de configuracion en "exphbs"
+  handlebars: allowInsecurePrototypeAccess(Handlebars),
+  defaultLayaout: "main",
+  //todas estas configuraciones hacen una vista por default en todas las vistas
+  layoutsDir: path.join(app.get("views"), "layouts"),
+  partialDir: path.join(app.get("views"), "partials"),
+  extname: ".hbs",
+  // create custom helpers here
+  helpers: {
+    imageZero: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 0) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageOne: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 1) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwo: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 2) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageThree: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 3) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageFour: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 4) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageFive: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 5) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageSix: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 6) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageSeven: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 7) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageEight: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 8) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageNine: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 9) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 10) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+  },
+});
+app.engine(".hbs", hbs.engine);
 app.set("view engine", ".hbs");
 
 // Middlewares (todas las funciones que seran ejecutadas antes de llegar al servidor)
@@ -139,12 +229,11 @@ app.use(
       const filetypes = /jpeg|jpg|png|gif/;
       const mimetype = filetypes.test(file.mimetype);
       const extname = filetypes.test(path.extname(file.originalname));
-      if(mimetype && extname){
+      if (mimetype && extname) {
         return cb(null, true);
       }
       cb("Error: Archivo debe ser una imagen valida");
-
-    }
+    },
   }).single("image")
 );
 //sirve para poder entender los datos entregados del formulario

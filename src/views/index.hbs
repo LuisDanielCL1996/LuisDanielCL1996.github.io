@@ -1,11 +1,16 @@
-
-  <section class="slider">
-    <ul class="slider1">
-      <li><img src="/img/hero.jpg" alt="Slider Uno"></li>
-      <li><img src="/img/slider1.jpg" alt="Slider dos"></li>
-      <li><img src="/img/slider3.jpg" alt="Slider tres"></li>
-    </ul>
-  </section>  
+<section class="slider">
+  <ul class="slider1">
+     {{#imageThree image}}
+    <li><img src="{{path}}" alt="Slider Uno"></li>
+    {{/imageThree}}
+    {{#imageFour image}}
+    <li><img src="{{path}}" alt="Slider dos"></li>
+    {{/imageFour}}
+    {{#imageFive image}}
+    <li><img src="{{path}}" alt="Slider tres"></li>
+    {{/imageFive}}
+  </ul>
+</section>
 
 <section id="portfolio">
   <div class="container-fluid">
@@ -29,7 +34,9 @@
               <p>App/Digital Product</p>
             </a>
           </div>
-          <img src="/img/portfolio-01.jpg" alt="portfolio 1" class="img-fluid">
+           {{#imageSix image}}
+          <img src="{{path}}" alt="portfolio 1" class="img-fluid">
+          {{/imageSix}}
         </div>
       </div>
 
@@ -43,7 +50,9 @@
               <p>App/Digital Product</p>
             </a>
           </div>
-          <img src="/img/portfolio-02.jpg" alt="portfolio 2" class="img-fluid">
+          {{#imageSeven image}}
+          <img src="{{path}}" alt="portfolio 2" class="img-fluid">
+          {{/imageSeven}}
         </div>
       </div>
 
@@ -57,7 +66,9 @@
               <p>App/Digital Product</p>
             </a>
           </div>
-          <img src="/img/portfolio-03.jpg" alt="portfolio 3" class="img-fluid">
+          {{#imageEight image}}
+          <img src="{{path}}" alt="portfolio 3" class="img-fluid">
+          {{/imageEight}}
         </div>
       </div>
 
@@ -72,7 +83,9 @@
               <p>App/Digital Product</p>
             </a>
           </div>
-          <img src="/img/portfolio-04.jpg" alt="portfolio 4" class="img-fluid">
+          {{#imageNine image}}
+          <img src="{{path}}" alt="portfolio 4" class="img-fluid">
+          {{/imageNine}}
         </div>
       </div>
     </div>
@@ -116,9 +129,9 @@
                   </i></a></li>
             </ul>
           </div>
-          {{#each image}}
+          {{#imageZero image}}
           <img src="{{path}}" class="img-fluid" alt="member 1">
-          {{/each}}
+          {{/imageZero}}
         </div>
       </div>
 
@@ -146,7 +159,9 @@
                   </i></a></li>
             </ul>
           </div>
-          <img src="/img/member-02.jpg" class="img-fluid" alt="member 2">
+           {{#imageOne image}}
+          <img src="{{path}}" class="img-fluid" alt="member 2">
+           {{/imageOne }}
         </div>
       </div>
 
@@ -174,7 +189,9 @@
                   </i></a></li>
             </ul>
           </div>
-          <img src="/img/member-03.jpg" class="img-fluid" alt="member 3">
+          {{#imageTwo image}}
+          <img src="{{path}}" class="img-fluid" alt="member 3">
+          {{/imageTwo}}
         </div>
       </div>
     </div>
@@ -268,7 +285,9 @@
             <div class="testimonial-user">
               <div class="row">
                 <div class="col-md-3">
-                  <img src="/img/member-01.jpg" class="img-fluid" alt="testimonial user 1">
+                   {{#imageZero image}}
+                  <img src="{{path}}" class="img-fluid" alt="testimonial user 1">
+                  {{/imageZero}}
                 </div>
                 <div class="col-md-9">
                   <h6>Alondra Olvera</h6>
@@ -304,7 +323,9 @@
             <div class="testimonial-user">
               <div class="row">
                 <div class="col-md-3">
-                  <img src="/img/member-02.jpg" class="img-fluid" alt="testimonial user 2">
+                  {{#imageOne image}}
+                  <img src="{{path}}" class="img-fluid" alt="testimonial user 2">
+                  {{/imageOne}}
                 </div>
                 <div class="col-md-9">
                   <h6>Paola Soto</h6>
@@ -340,7 +361,9 @@
             <div class="testimonial-user">
               <div class="row">
                 <div class="col-md-3">
-                  <img src="/img/member-03.jpg" class="img-fluid" alt="testimonial user 3">
+                  {{#imageTwo image}}
+                  <img src="{{path}}" class="img-fluid" alt="testimonial user 3">
+                  {{/imageTwo}}
                 </div>
                 <div class="col-md-9">
                   <h6>Elon Musk</h6>
@@ -411,4 +434,3 @@
     </div>
   </div>
 </section>
-
