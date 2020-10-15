@@ -1,13 +1,34 @@
 <section class="slider">
   <ul class="slider1">
     {{#imageThree image}}
-    <li><img src="{{path}}" alt="Slider Uno"></li>
+    <li>
+      <h4 class="card-title d-flex justify-content-between align-items-center">
+        <a href="/upload/edit/{{_id}}">
+          <ion-icon name="create-outline"></ion-icon>
+        </a>
+      </h4>
+      <img src="{{path}}" alt="Slider Uno">
+    </li>
     {{/imageThree}}
     {{#imageFour image}}
-    <li><img src="{{path}}" alt="Slider dos"></li>
+    <li>
+      <h4 class="card-title d-flex justify-content-between align-items-center">
+        <a href="/upload/edit/{{_id}}">
+          <ion-icon name="create-outline"></ion-icon>
+        </a>
+      </h4>
+      <img src="{{path}}" alt="Slider dos">
+    </li>
     {{/imageFour}}
     {{#imageFive image}}
-    <li><img src="{{path}}" alt="Slider tres"></li>
+    <li>
+      <h4 class="card-title d-flex justify-content-between align-items-center">
+        <a href="/upload/edit/{{_id}}">
+          <ion-icon name="create-outline"></ion-icon>
+        </a>
+      </h4>
+      <img src="{{path}}" alt="Slider tres">
+    </li>
     {{/imageFive}}
   </ul>
 </section>
@@ -27,6 +48,13 @@
       <div class="col-md-3">
         <div class="portfolio-container">
           <div class="portfolio-details">
+            {{#imageSix image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            {{/imageSix}}
             <a href="#">
               <h2>Keep Calm and Eat</h2>
             </a>
@@ -43,6 +71,13 @@
       <div class="col-md-3">
         <div class="portfolio-container">
           <div class="portfolio-details">
+            {{#imageSeven image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            {{/imageSeven}}
             <a href="#">
               <h2>New Horizons</h2>
             </a>
@@ -59,6 +94,13 @@
       <div class="col-md-3">
         <div class="portfolio-container">
           <div class="portfolio-details">
+            {{#imageEight image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            {{/imageEight}}
             <a href="#">
               <h2>Urban Oasis</h2>
             </a>
@@ -75,6 +117,13 @@
       <div class="col-md-3">
         <div class="portfolio-container">
           <div class="portfolio-details">
+            {{#imageNine image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            {{/imageNine}}
             <a href="#">
               <h2>No Speed Limits</h2>
 
@@ -109,7 +158,11 @@
         <div class="member-container">
           <div class="member-details">
             {{#imageZero image}}
-            <a href="/upload/edit/{{_id}}"><ion-icon name="create-outline"></ion-icon></a>
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
             {{/imageZero}}
             <h5>Andrea M. Olivos</h5>
             <span>Creative Director</span>
@@ -141,6 +194,14 @@
       <div class="col-md-4">
         <div class="member-container">
           <div class="member-details">
+            {{#imageOne image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            {{/imageOne}}
+
             <h5>Lidia A. Flores</h5>
             <span>Lead Designer</span>
             <ul class="list-inline">
@@ -171,6 +232,13 @@
       <div class="col-md-4">
         <div class="member-container">
           <div class="member-details">
+            {{#imageTwo image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            {{/imageTwo}}
             <h5>Adrian A. Carmona</h5>
             <span>Lead Developer</span>
             <ul class="list-inline">
