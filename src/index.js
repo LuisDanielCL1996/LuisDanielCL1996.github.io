@@ -215,27 +215,7 @@ app.set("view engine", ".hbs");
 
 // Middlewares (todas las funciones que seran ejecutadas antes de llegar al servidor)
 app.use(express.urlencoded({ extended: false }));
-const storage = multer.diskStorage({
-  destination: path.join(__dirname, "public/img/uploads"),
-  filename: (req, file, cb) => {
-    cb(null, uuidv4() + path.extname(file.originalname));
-  },
-});
-app.use(
-  multer({
-    storage: storage,
-    limits: { fileSize: 1000000 },
-    fileFilter: (req, file, cb) => {
-      const filetypes = /jpeg|jpg|png|gif/;
-      const mimetype = filetypes.test(file.mimetype);
-      const extname = filetypes.test(path.extname(file.originalname));
-      if (mimetype && extname) {
-        return cb(null, true);
-      }
-      cb("Error: Archivo debe ser una imagen valida");
-    },
-  }).single("image")
-);
+
 //sirve para poder entender los datos entregados del formulario
 app.use(methodOverride("_method"));
 app.use(
