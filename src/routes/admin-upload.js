@@ -44,13 +44,17 @@ router.get("/upload/edit/:id", async (req, res) => {
 });
 router.put(
   "/upload/edit-img/:id",
-  function (req, res) {
+  upload,
+  function (req, res, next) {
     upload(req, res, function (err) {
       if (req.fileValidationError) {
         req.flash("error", "Error: El archivo tiene que ser una Imagen");
         res.redirect("/upload");
-        
+      } else {
+        next();
       }
+
+      //return res.end(req.fileValidationError);
     });
   },
   async (req, res) => {

@@ -17,11 +17,12 @@ body {
 }
 .slider img{
 	display: block;
-	width: auto;
+	width: 1520px;
+	height: 600px;
 	max-width: 100%;
 	margin: 0 auto;
 	margin-bottom: -4px;
-	height: auto;
+	object-fit: cover;
 }
 h1 {
 	font-size: 66px;
@@ -54,9 +55,11 @@ a i {
 	color: white;
 }
 
-section {
-	padding: 120px 0;
+
+.paddingSection {
+	padding: 100px 0;
 }
+
 
 .bg-light-grey {
 	background-color: #f5f5f5;
@@ -184,6 +187,9 @@ section {
 	-moz-transition: all 0.8s;
 	-webkit-transition: all 0.8s;
 	transition: all 0.8s;
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
 }
 
 .portfolio-container:hover img {
@@ -210,6 +216,11 @@ section {
 .member-container {
 	position: relative;
 	margin: 10px 0;
+}
+.member-container img {
+	width: 500px;
+	height: 350px;
+	object-fit: cover;
 }
 
 .member-details {
