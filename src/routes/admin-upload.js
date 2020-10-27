@@ -3,7 +3,10 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
+
 const Image = require("../models/Image");
+const Text = require("../models/Text");
+
 const fs = require("fs-extra");
 
 const storage = multer.diskStorage({
@@ -34,7 +37,8 @@ const upload = multer({
 
 router.get("/upload", async (req, res) => {
   const image = await Image.find();
-  res.render("admin", { image });
+  const text = await Text.find();
+  res.render("admin", { image, text });
   //ruta para mostrar la imagen ya cargada
 });
 
@@ -69,8 +73,8 @@ router.put(
 
 router.get("/", async (req, res) => {
   const image = await Image.find();
-
-  res.render("index", { image });
+  const text = await Text.find();
+  res.render("index", { image, text });
   //ruta para mostrar la imagen ya cargada
 });
 

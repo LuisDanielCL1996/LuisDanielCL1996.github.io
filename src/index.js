@@ -23,6 +23,7 @@ const app = express();
 
 const Note = require("./models/Note");
 const User = require("./models/User");
+const Text = require("./models/Text");
 //const Image = require('./models/Image');
 //const Admin = require('./models/admin');
 // Resources definitions
@@ -72,6 +73,7 @@ const adminBro = new AdminBro({
     },
     { resource: User },
     { resource: Note },
+    { resource: Text },
   ],
   rootPath: "/admin",
 });

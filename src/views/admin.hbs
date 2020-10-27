@@ -35,7 +35,7 @@
       </div>
     </div>
   </div>
-  
+
   <ul class="slider1">
     <li>
       {{#imageThree image}}
@@ -58,14 +58,13 @@
   </ul>
 </section>
 
-<section class="paddingSection" id="portfolio" >
+<section class="paddingSection" id="portfolio">
   <div class="container-fluid">
     <div class="content-center">
-      <h2>Start creating a big impact</h2>
-      <p>The opportunities to positively impact the world are greater than ever. As the world’s largest early-stage
-        investment platform, we believe that it is important to have exceptional people, regardless of their background
-        and nationality, work on addressing large global opportunities and challenges by building groundbreaking
-        technology companies.</p>
+      {{#imageZero text}}
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+      {{/imageZero}}
     </div>
 
     <div class="row">
@@ -81,10 +80,12 @@
             </h4>
             {{/imageSix}}
             <a href="#">
-              <h2>Keep Calm and Eat</h2>
+              {{#imageOne text}}
+              <h2> {{title}} </h2>
             </a>
             <a href="#">
-              <p>App/Digital Product</p>
+              <p> {{description}} </p>
+              {{/imageOne}}
             </a>
           </div>
           {{#imageSix image}}
@@ -104,10 +105,12 @@
             </h4>
             {{/imageSeven}}
             <a href="#">
-              <h2>New Horizons</h2>
+              {{#imageTwo text}}
+              <h2>{{title}}</h2>
             </a>
             <a href="#">
-              <p>App/Digital Product</p>
+              <p>{{description}}</p>
+              {{/imageTwo}}
             </a>
           </div>
           {{#imageSeven image}}
@@ -127,10 +130,12 @@
             </h4>
             {{/imageEight}}
             <a href="#">
-              <h2>Urban Oasis</h2>
+              {{#imageThree text}}
+              <h2>{{title}}</h2>
             </a>
             <a href="#">
-              <p>App/Digital Product</p>
+              <p>{{description}}</p>
+              {{/imageThree}}
             </a>
           </div>
           {{#imageEight image}}
@@ -150,11 +155,12 @@
             </h4>
             {{/imageNine}}
             <a href="#">
-              <h2>No Speed Limits</h2>
-
+              {{#imageFour text}}
+              <h2>{{title}}</h2>
             </a>
             <a href="#">
-              <p>App/Digital Product</p>
+              <p>{{description}}</p>
+              {{/imageFour}}
             </a>
           </div>
           {{#imageNine image}}
@@ -164,8 +170,10 @@
       </div>
     </div>
     <div class="text-center topmargin-sm">
-      <p>Ready to accelerate your project?</p>
-      <a href="#" class="text-dark">Just let us know.</a>
+      {{#imageFive text}}
+      <p>{{title}}</p>
+      <a href="#" class="text-dark">{{description}}</a>
+      {{/imageFive}}
     </div>
   </div>
 </section>
@@ -173,10 +181,10 @@
 <section id="aboutus" class="bg-light-grey paddingSection">
   <div class="container">
     <div class="content-center">
-      <h2>Get from zero to seed in 6 months</h2>
-      <p>Joining Antler is a full-time commitment. Join before you started building your company, find co-founder(s) and
-        start building from scratch with our support. Select one of our cities, and get ready for a journey that will
-        get you places you didn’t think was possible.</p>
+      {{#imageSix text}}
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+      {{/imageSix}}
     </div>
     <div class="row">
       <div class="col-md-4">
@@ -189,8 +197,10 @@
               </a>
             </h4>
             {{/imageZero}}
-            <h5>Andrea M. Olivos</h5>
-            <span>Creative Director</span>
+            {{#imageSeven text}}
+            <h5>{{title}}</h5>
+            <span>{{description}}</span>
+            {{/imageSeven}}
             <ul class="list-inline">
               <li class="list-inline-item"> <a href="#"> <i>
                     <ion-icon name="logo-instagram"></ion-icon>
@@ -226,9 +236,10 @@
               </a>
             </h4>
             {{/imageOne}}
-
-            <h5>Lidia A. Flores</h5>
-            <span>Lead Designer</span>
+            {{#imageEight text}}
+            <h5>{{title}}</h5>
+            <span>{{description}}</span>
+            {{/imageEight}}
             <ul class="list-inline">
               <li class="list-inline-item"> <a href="#"> <i>
                     <ion-icon name="logo-twitch"></ion-icon>
@@ -264,8 +275,10 @@
               </a>
             </h4>
             {{/imageTwo}}
-            <h5>Adrian A. Carmona</h5>
-            <span>Lead Developer</span>
+            {{#imageNine text}}
+            <h5>{{title}}</h5>
+            <span>{{description}}</span>
+            {{/imageNine}}
             <ul class="list-inline">
               <li class="list-inline-item"> <a href="#"> <i>
                     <ion-icon name="logo-instagram"></ion-icon>
@@ -297,9 +310,10 @@
 <section id="pricing" class="divider paddingSection">
   <div class="container">
     <div class="content-center">
-      <h2>Pricing built for <b>every business</b></h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Nisi scelerisque eu ultrices vitae.</p>
+      {{#imageTen text}}
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+        {{/imageTen}}
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -344,7 +358,7 @@
 <section id="testimonials" class="divider paddingSection">
   <div class="container">
     <div class="content-center">
-      <h2>A few words from <b>our clients...</b></h2>
+      <h2>A few words from our clients...</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
     </div>
@@ -490,7 +504,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 topmargin-sm">
-        <h3>Ready to accelerate your proyect? <b>just let us know.</b></h3>
+        <h3>Ready to accelerate your proyect? just let us know.</h3>
         <p>Nibh nisl condimentum id venenatis a condimentum vitae sapien. Amet luctus venenatis lectus magna fringilla.
         </p>
       </div>
