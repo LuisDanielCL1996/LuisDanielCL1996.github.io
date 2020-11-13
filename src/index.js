@@ -25,7 +25,7 @@ const Note = require("./models/Note");
 const User = require("./models/User");
 const Text = require("./models/Text");
 //const Image = require('./models/Image');
-//const Admin = require('./models/admin');
+const Upload = require("./models/admin");
 // Resources definitions
 const Admin = mongoose.model("Admin", {
   email: { type: String, required: true },
@@ -74,6 +74,7 @@ const adminBro = new AdminBro({
     { resource: User },
     { resource: Note },
     { resource: Text },
+    { resource: Upload },
   ],
   rootPath: "/admin",
 });
@@ -94,7 +95,7 @@ app.use(adminBro.options.rootPath, routerUser);
 
 require("./database");
 require("./config/passport");
-//require('./config/AdminBro');
+require("./config/passportAdmin");
 
 // Settings    (aqui van todas las configuraciones, Sherlock)
 app.set("port", process.env.PORT || 3000);
@@ -248,6 +249,14 @@ app.use(require("./routes/admin-upload"));
 // Static Files
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use((err, req, res, next) => {
+  if (err) {
+    req.flash("error", "Error:el archivo debe pesar maximo 1 MB");
+    res.redirect("/upload");
+  } else {
+    next();
+  }
+});
 // Server init
 app.listen(app.get("port"), () => {
   console.log("Server on port", app.get("port"));

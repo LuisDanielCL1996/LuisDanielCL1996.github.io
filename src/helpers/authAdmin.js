@@ -1,12 +1,12 @@
 const ayudas = {};
 
 ayudas.adminAuthenticated = (req, res, next) => {
-	if (req.isAuthenticated()) {
-		return next();
-	}
-	req.flash('error_msg','Not Authorized');
-	res.redirect('/admin/Signin');
-};
- 
+  if (req.isAuthenticated()) {
+    return next();
+  }
 
- module.exports = ayudas;
+  req.flash("error", "Not Authorized");
+  res.redirect("/upload/signin");
+};
+
+module.exports = ayudas;

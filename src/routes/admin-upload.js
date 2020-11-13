@@ -7,7 +7,8 @@ const { v4: uuidv4 } = require("uuid");
 const Image = require("../models/Image");
 const Text = require("../models/Text");
 
-const fs = require("fs-extra");
+const passport = require("passport");
+const { adminAuthenticated } = require("../helpers/authAdmin");
 
 const storage = multer.diskStorage({
   destination: path.join(__dirname, "../public/img/uploads"),
@@ -23,6 +24,7 @@ const upload = multer({
     const filetypes = /jpeg|jpg|png|gif/;
     const mimetype = filetypes.test(file.mimetype);
     const extname = filetypes.test(path.extname(file.originalname));
+   
     if (mimetype && extname) {
       return cb(null, true);
     }
@@ -35,7 +37,20 @@ const upload = multer({
   },
 }).single("image");
 
-router.get("/upload", async (req, res) => {
+router.get("/upload/signin", (req, res) => {
+  res.render("admin/Signin");
+});
+
+router.post(
+  "/upload/signin",
+  passport.authenticate("login", {
+    successRedirect: "/upload",
+    failureRedirect: "/admin/signin",
+    failureFlash: true,
+  })
+);
+
+router.get("/upload", adminAuthenticated, async (req, res) => {
   const image = await Image.find();
   const text = await Text.find();
   res.render("admin", { image, text });
@@ -52,7 +67,10 @@ router.put(
   function (req, res, next) {
     upload(req, res, function (err) {
       if (req.fileValidationError) {
-        req.flash("error", "Error: El archivo tiene que ser una Imagen");
+        req.flash(
+          "error",
+          "Error: El archivo tiene que ser una Imagen y debe pesar maximo 1 MB"
+        );
         res.redirect("/upload");
       } else {
         next();
@@ -95,16 +113,9 @@ router.post("/upload", async (req, res) => {
   //ruta para guardar la imagen
 });
 
-router.get("/admin/:id", async (req, res) => {
-  const { id } = req.params;
-  const image = await image.findById(id);
-
-  //ruta para elegir la imagen que sera remplazada
-});
-
-router.get("/admin/:id/upload", (req, res) => {
-  res.send("Image Upload");
-  //ruta para mostrar la imagen ya cargada
+router.get("/upload/logout", (req, res) => {
+  req.logout();
+  res.redirect("/");
 });
 
 module.exports = router;
