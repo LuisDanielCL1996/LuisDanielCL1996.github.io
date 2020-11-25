@@ -2,6 +2,7 @@ const express = require('express');//objeto que me facilitara la creacion de rut
 const router = express.Router();
 
 const Note = require('../models/Note'); //Para manipular la DB
+const Image = require("../models/Image");
 const { isAuthenticated } = require('../helpers/auth');
 
 router.get('/notes/add', isAuthenticated, (req,res) => {
@@ -36,8 +37,9 @@ router.post('/notes/new-note', isAuthenticated, async (req,res) => {
 });
 
 router.get('/notes', isAuthenticated, async (req, res) => {
+	const image = await Image.find();
 	const notes = await Note.find({user: req.user.id}).sort({date: 'desc'});
-    res.render('notes/all-notes',{ notes });
+    res.render('notes/all-notes',{ notes,image });
   });
 
 router.get('/notes/edit/:id', isAuthenticated, async (req,res) => {

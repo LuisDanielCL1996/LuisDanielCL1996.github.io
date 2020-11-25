@@ -211,6 +211,204 @@ const hbs = exphbs.create({
       }
       return out;
     },
+    imageEleven: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 11) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwelve: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 12) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageThirteen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 13) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageFourteen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 14) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageFifteen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 15) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageSixteen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 16) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageSeventeen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 17) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageEightteen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 18) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageNineteen: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 19) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwenty: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 20) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentyone: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 21) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentytwo: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 22) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentythree: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 23) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentyfour: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 24) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentyfive: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 25) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentysix: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 26) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentyseven: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 27) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentyeight: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 28) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imageTwentynine: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 29) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imagethirty: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 30) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imagethirtyone: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 31) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imagethirtytwo: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 32) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
   },
 });
 app.engine(".hbs", hbs.engine);
@@ -251,7 +449,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use((err, req, res, next) => {
   if (err) {
-    req.flash("error", "Error:el archivo debe pesar maximo 1 MB");
+    req.flash("error", "Error:Hubo un error, recuerda que el archivo debe pesar maximo 1 MB");
     res.redirect("/upload");
   } else {
     next();

@@ -2,11 +2,13 @@ const express = require('express');//objeto que me facilitara la creacion de rut
 const router = express.Router();
 
 const User = require('../models/User');
-
+const Image = require("../models/Image");
 const passport = require('passport');
 
-router.get('/users/signin',(req,res) => {
-	res.render('users/signin');
+router.get('/users/signin',async (req,res) => {
+	const image = await Image.find();
+	
+	res.render('users/signin',{image});
 }); 
 router.post('/users/signin', passport.authenticate('local', {
 	successRedirect: '/notes',

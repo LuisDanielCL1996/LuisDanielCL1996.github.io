@@ -37,8 +37,9 @@ const upload = multer({
   },
 }).single("image");
 
-router.get("/upload/signin", (req, res) => {
-  res.render("admin/Signin");
+router.get("/upload/signin", async (req, res) => {
+  const image = await Image.find();
+  res.render("admin/Signin",{image});
 });
 
 router.post(
@@ -96,7 +97,12 @@ router.get("/", async (req, res) => {
   //ruta para mostrar la imagen ya cargada
 });
 
-router.post("/upload", async (req, res) => {
+router.get("/img", (req, res) => {
+ 
+  res.render("admin/img");
+});
+
+router.post("/img", upload, async (req, res) => {
   const image = new Image();
   image.title = req.body.title;
   image.description = req.body.description;

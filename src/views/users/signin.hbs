@@ -4,14 +4,16 @@
 			<div class="card-header">
 				<h4>Account Login </h4>
 			</div>
-			<img src="/img/apex.jpg" class=" rounded-circle mx-auto d-block m-4 logo2" alt="Logo">
+			{{#imageTwentythree image}}
+			<img src="{{path}}" class=" rounded-circle mx-auto d-block m-4 logo2" alt="Logo">
+			{{/imageTwentythree}}
 			<div class="card-body">
 				<form action="/users/signin" method="POST">
 					<div class="form-group">
-						<input type="email"  class="form-control" name="email" placeholder="Email" autofocus>
+						<input type="email" class="form-control" name="email" placeholder="Email" autofocus>
 					</div>
 					<div class="form-group">
-						<input type="password"  class="form-control" name="password" placeholder="Password">
+						<input type="password" class="form-control" name="password" placeholder="Password">
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-block">

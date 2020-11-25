@@ -1,5 +1,14 @@
 <section class="slider">
   <ul class="slider1">
+    <li>
+      <div style="width:100%;height:0;padding-bottom:43%;position:relative;">
+        {{#imagethirtytwo text}}
+        <iframe src="{{title}}" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed"
+          allowFullScreen>
+        </iframe>
+        {{/imagethirtytwo}}
+      </div>
+    </li>
     {{#imageThree image}}
     <li><img src="{{path}}" alt="Slider Uno"></li>
     {{/imageThree}}
@@ -9,6 +18,7 @@
     {{#imageFive image}}
     <li><img src="{{path}}" alt="Slider tres"></li>
     {{/imageFive}}
+
   </ul>
 </section>
 
@@ -23,7 +33,6 @@
     </div>
 
     <div class="row">
-
       <div class="col-md-3">
         <div class="portfolio-container">
           <div class="portfolio-details">
@@ -104,21 +113,87 @@
       {{/imageFive}}
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="portfolio-container">
+          <div class="portfolio-details">
+            <a href="#">
+              {{#imageTwentytwo text}}
+              <h2>{{title}}</h2>
+            </a>
+            <a href="#">
+              <p>{{description}}</p>
+              {{/imageTwentytwo}}
+            </a>
+          </div>
+          {{#imageTen image}}
+          <img src="{{path}}" alt="portfolio 1" class="img-fluid">
+          {{/imageTen}}
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="portfolio-container">
+          <div class="portfolio-details">
+            <a href="#">
+              {{#imageTwentythree text}}
+              <h2>{{title}}</h2>
+            </a>
+            <a href="#">
+              <p>{{description}}</p>
+              {{/imageTwentythree}}
+            </a>
+          </div>
+          {{#imageEleven image}}
+          <img src="{{path}}" alt="portfolio 2" class="img-fluid">
+          {{/imageEleven}}
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="portfolio-container">
+          <div class="portfolio-details">
+            <a href="#">
+              {{#imageTwentyfour text}}
+              <h2>{{title}}</h2>
+            </a>
+            <a href="#">
+              <p>{{description}}</p>
+              {{/imageTwentyfour}}
+            </a>
+          </div>
+          {{#imageTwelve image}}
+          <img src="{{path}}" alt="portfolio 3" class="img-fluid">
+          {{/imageTwelve}}
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="portfolio-container">
+          <div class="portfolio-details">
+            <a href="#">
+              {{#imageTwentyfive text}}
+              <h2>{{title}}</h2>
+
+            </a>
+            <a href="#">
+              <p>{{description}}</p>
+              {{/imageTwentyfive}}
+            </a>
+          </div>
+          {{#imageThirteen image}}
+          <img src="{{path}}" alt="portfolio 4" class="img-fluid">
+          {{/imageThirteen}}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="carousel2">
-  <div class="wrap">
-    <ul>
-      <li> <img src="http://ppcdn.500px.org/23718959/f216a69d1cb7667436a1e6a33c7e4b2894d0fe18/4.jpg" /></li>
-      <li> <img src="http://ppcdn.500px.org/72233281/5e145f8f95427805045dbaf1ec2cf17bcb4b25b3/3.jpg" /></li>
-      <li> <img src="http://ppcdn.500px.org/72190239/1ac03d25646f92afd4d80ed8e6f2c1cfc78635b5/4.jpg" /></li>
-      <li> <img src="http://ppcdn.500px.org/58739696/b0c33312552e8581ef457720bb924f16421dcec8/3.jpg" /></li>
-      <li> <img src="http://ppcdn.500px.org/43028892/84b059f25810f07962ae46e63c44c625b2f9b9e6/2048.jpg" /></li>
-      <li> <img src="http://ppcdn.500px.org/33154839/a53aeaca99ee94a9803f445fd30163142f308829/3.jpg" /></li>
-      <li> <img src="http://ppcdn.500px.org/17981845/d1fdacaf5818108c248b05cd472329d314e732d3/3.jpg" /></li>
-    </ul>
-  </div>
-</div>
+
 <section id="aboutus" class="bg-light-grey paddingSection">
   <div class="container">
     <div class="content-center">
@@ -169,7 +244,7 @@
             {{/imageEight}}
             <ul class="list-inline">
               <li class="list-inline-item"> <a href="#"> <i>
-                    <ion-icon name="logo-twitch"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
                   </i>
                 </a></li>
               <li class="list-inline-item"> <a href="#"> <i>
@@ -226,8 +301,154 @@
     </div>
   </div>
 </section>
+<section id="aboutus" class="bg-light-grey paddingSection">
+  <div class="container">
+    <div class="row news-cards">
+      <div class="col-md-4">
+        {{#imageFourteen image}}
+        <img src="{{path}}" alt="">
+        {{/imageFourteen }}
+        {{#imageSixteen text}}
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        {{/imageSixteen}}
+      </div>
 
-<section id="pricing" class="divider paddingSection">
+      <div class="col-md-4">
+        {{#imageFifteen image}}
+        <img src="{{path}}" alt="">
+        {{/imageFifteen }}
+
+        {{#imageSeventeen text}}
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        {{/imageSeventeen}}
+      </div>
+
+      <div class="col-md-4">
+        {{#imageSixteen image}}
+        <img src="{{path}}" alt="">
+        {{/imageSixteen }}
+
+        {{#imageEightteen text}}
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        {{/imageEightteen}}
+      </div>
+    </div>
+    <div class="news-cards">
+      <div class="row">
+        <div class="col-md-4">
+          {{#imageSeventeen image}}
+          <img src="{{path}}" alt="">
+          {{/imageSeventeen }}
+
+          {{#imageNineteen text}}
+          <h3>{{title}}</h3>
+          <p>{{description}}</p>
+          {{/imageNineteen}}
+        </div>
+
+        <div class="col-md-4">
+          {{#imageEightteen image}}
+          <img src="{{path}}" alt="">
+          {{/imageEightteen }}
+
+          {{#imageTwenty text}}
+          <h3>{{title}}</h3>
+          <p>{{description}}</p>
+          {{/imageTwenty}}
+        </div>
+
+        <div class="col-md-4">
+          {{#imageNineteen image}}
+          <img src="{{path}}" alt="">
+          {{/imageNineteen }}
+
+          {{#imageTwentyone text}}
+          <h3>{{title}}</h3>
+          <p>{{description}}</p>
+          {{/imageTwentyone}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="divider paddingSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {{#imagethirty text}}
+        <h2>{{title}}</h2>
+        <p style="text-align: justify;">{{description}}</p>
+        {{/imagethirty}}
+      </div>
+
+      <div class="col-md-4">
+        {{#imagethirtyone text}}
+        <iframe width="500" height="315" src="{{title}}" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        {{/imagethirtyone}}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="divider paddingSection">
+  <div class="container blogs">
+    {{#imageTwentysix text}}
+    <h2>{{title}}</h2>
+    {{/imageTwentysix }}
+    <div class="row">
+      <div class="col-md-4">
+        <div class="plans2 plan-light2" style="right: 50%;">
+          {{#imageTwenty image}}
+          <img src="{{path}}" alt="">
+          {{/imageTwenty}}
+          {{#imageTwentyseven text}}
+          <h1>{{title}}</h1>
+          <p>{{description}}</p>
+          {{/imageTwentyseven }}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="plans2 plan-light2" style="right: 20%;">
+          {{#imageTwentyone image}}
+          <img src="{{path}}" alt="">
+          {{/imageTwentyone}}
+
+          {{#imageTwentyeight text}}
+          <h1>{{title}}</h1>
+          <p>{{description}}</p>
+          {{/imageTwentyeight }}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="plans2 plan-light2" style="left: 10%;">
+          {{#imageTwentytwo image}}
+          <img src="{{path}}" alt="">
+          {{/imageTwentytwo}}
+
+          {{#imageTwentynine text}}
+          <h1>{{title}}</h1>
+          <p>{{description}}</p>
+          {{/imageTwentynine }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="divider paddingSection">
   <div class="container">
     <div class="content-center">
       {{#imageTen text}}

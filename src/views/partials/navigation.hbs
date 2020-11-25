@@ -1,17 +1,88 @@
+<nav class="nav-main">
+
+  <!--<img src="/img/apex.jpg" class="nav-brand" alt="logo">-->
+  <ul id="nav-menu">
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <li>
+      {{#if user}}
+      <h4 class="card-title d-flex justify-content-between align-items-center">
+        {{#imageTwentythree image}}
+        <a href="/upload/edit/{{_id}}">
+          <ion-icon name="create-outline"> </ion-icon>
+          <img src="{{path}}" class="nav-brand" alt="logo">
+          {{/imageTwentythree}}
+        </a>
+      </h4>
+      {{else}}
+      {{#imageTwentythree image}}
+      <img src="{{path}}" class="nav-brand" alt="logo">
+      {{/imageTwentythree}}
+        {{/if}}
+    </li>
+    <li>
+      <a href="/">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="#">Why Us</a>
+    </li>
+    <li>
+      <a href="#">Solutions</a>
+    </li>
+    <li>
+      <a href="#">Partners</a>
+    </li>
+    <li>
+      <a href="#">Resources</a>
+    </li>
+    <li>
+      <a href="#">Careers</a>
+    </li>
+    <li>
+      <a href="#">Join Us</a>
+    </li>
+    <li>
+      <a href="#">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown">
   <div class="container">
     <a class="navbar-brand" href="/"><img src="/img/apex.jpg" class="logo-brand" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav nav-menu">
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Why Us</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Solutions</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Partners</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Resources</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Join Us</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Contact Us</a>
         </li>
       </ul>
       <ul class="ml-auto navbar-nav">
@@ -42,4 +113,5 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> 
+-->
