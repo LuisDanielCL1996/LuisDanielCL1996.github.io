@@ -38,33 +38,37 @@
 
   <ul class="slider1">
     <li>
-      <div style="width:100%;height:0;padding-bottom:43%;position:relative;">
-        {{#imagethirtytwo text}}
-        <iframe src="{{title}}" width="100%" height="100%" style="position:absolute"
-          frameBorder="0" class="giphy-embed" allowFullScreen>
-        </iframe>
-        {{/imagethirtytwo}}
+      <div class="slider-details">
+        <h1>We are creative</h1>
+        <h3>Get start your next awesome project</h3>
       </div>
-
-    </li>
-    <li>
+      <div class="overlay"></div>
       {{#imageThree image}}
       <img src="{{path}}" alt="Slider Uno">
       {{/imageThree}}
     </li>
 
     <li>
+      <div class="slider-details">
+        <h1>We are smart</h1>
+        <h3>Get start your next awesome project</h3>
+      </div>
+      <div class="overlay"></div>
       {{#imageFour image}}
       <img src="{{path}}" alt="Slider dos">
       {{/imageFour}}
     </li>
 
     <li>
+      <div class="slider-details">
+        <h1>We are amazing</h1>
+        <h3>Get start your next awesome project</h3>
+      </div>
+      <div class="overlay"></div>
       {{#imageFive image}}
       <img src="{{path}}" alt="Slider tres">
       {{/imageFive}}
     </li>
-
   </ul>
 </section>
 
@@ -80,15 +84,16 @@
     <div class="row">
 
       <div class="col-md-3">
+        {{#imageSix image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageSix}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageSix image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageSix}}
+
             <a href="#">
               {{#imageOne text}}
               <h2> {{title}} </h2>
@@ -98,6 +103,7 @@
               {{/imageOne}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageSix image}}
           <img src="{{path}}" alt="portfolio 1" class="img-fluid">
           {{/imageSix}}
@@ -105,15 +111,16 @@
       </div>
 
       <div class="col-md-3">
+        {{#imageSeven image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageSeven}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageSeven image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageSeven}}
+
             <a href="#">
               {{#imageTwo text}}
               <h2>{{title}}</h2>
@@ -123,6 +130,7 @@
               {{/imageTwo}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageSeven image}}
           <img src="{{path}}" alt="portfolio 2" class="img-fluid">
           {{/imageSeven}}
@@ -130,15 +138,16 @@
       </div>
 
       <div class="col-md-3">
+        {{#imageEight image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageEight}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageEight image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageEight}}
+
             <a href="#">
               {{#imageThree text}}
               <h2>{{title}}</h2>
@@ -148,6 +157,7 @@
               {{/imageThree}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageEight image}}
           <img src="{{path}}" alt="portfolio 3" class="img-fluid">
           {{/imageEight}}
@@ -155,15 +165,16 @@
       </div>
 
       <div class="col-md-3">
+        {{#imageNine image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageNine}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageNine image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageNine}}
+
             <a href="#">
               {{#imageFour text}}
               <h2>{{title}}</h2>
@@ -173,6 +184,7 @@
               {{/imageFour}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageNine image}}
           <img src="{{path}}" alt="portfolio 4" class="img-fluid">
           {{/imageNine}}
@@ -191,15 +203,16 @@
     <div class="row">
 
       <div class="col-md-3">
+        {{#imageTen image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageTen}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageTen image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageTen}}
+
             <a href="#">
               {{#imageTwentytwo text}}
               <h2>{{title}}</h2>
@@ -209,6 +222,7 @@
               {{/imageTwentytwo}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageTen image}}
           <img src="{{path}}" alt="portfolio 1" class="img-fluid">
           {{/imageTen}}
@@ -216,15 +230,16 @@
       </div>
 
       <div class="col-md-3">
+        {{#imageEleven image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageEleven}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageEleven image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageEleven}}
+
             <a href="#">
               {{#imageTwentythree text}}
               <h2>{{title}}</h2>
@@ -234,6 +249,7 @@
               {{/imageTwentythree}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageEleven image}}
           <img src="{{path}}" alt="portfolio 2" class="img-fluid">
           {{/imageEleven}}
@@ -241,15 +257,16 @@
       </div>
 
       <div class="col-md-3">
+        {{#imageTwelve image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageTwelve}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-            {{#imageTwelve image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageTwelve}}
+
             <a href="#">
               {{#imageTwentyfour text}}
               <h2>{{title}}</h2>
@@ -259,6 +276,7 @@
               {{/imageTwentyfour}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageTwelve image}}
           <img src="{{path}}" alt="portfolio 3" class="img-fluid">
           {{/imageTwelve}}
@@ -266,16 +284,16 @@
       </div>
 
       <div class="col-md-3">
-         {{#imageThirteen image}}
-            <h4 class="card-title d-flex justify-content-between align-items-center">
-              <a href="/upload/edit/{{_id}}">
-                <ion-icon name="create-outline"></ion-icon>
-              </a>
-            </h4>
-            {{/imageThirteen}}
+        {{#imageThirteen image}}
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          <a href="/upload/edit/{{_id}}">
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </h4>
+        {{/imageThirteen}}
         <div class="portfolio-container">
           <div class="portfolio-details">
-           
+
             <a href="#">
               {{#imageTwentyfive text}}
               <h2>{{title}}</h2>
@@ -286,6 +304,7 @@
               {{/imageTwentyfive}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageThirteen image}}
           <img src="{{path}}" alt="portfolio 4" class="img-fluid">
           {{/imageThirteen}}
@@ -552,8 +571,79 @@
 
   </div>
 </section>
+<section class="details-card">
+  <div class="container">
+    {{#imageTwentysix text}}
+    <h3>{{title}}</h3>
+    {{/imageTwentysix}}
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-content">
+          <div class="card-img">
+            {{#imageTwenty image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            <img src="{{path}}" alt="">
+            {{/imageTwenty}}
+          </div>
+          <div class="card-desc">
+            {{#imageTwentyseven text}}
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{/imageTwentyseven }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-content">
+          <div class="card-img">
+            {{#imageTwentyone image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            <img src="{{path}}" alt="">
+            {{/imageTwentyone}}
+          </div>
+          <div class="card-desc">
+            {{#imageTwentyeight text}}
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{/imageTwentyeight }}
 
-<section class="divider paddingSection">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-content">
+          <div class="card-img">
+            {{#imageTwentytwo image}}
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+              <a href="/upload/edit/{{_id}}">
+                <ion-icon name="create-outline"></ion-icon>
+              </a>
+            </h4>
+            <img src="{{path}}" alt="">
+            {{/imageTwentytwo}}
+          </div>
+          <div class="card-desc">
+
+            {{#imageTwentynine text}}
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{/imageTwentynine }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section class="divider paddingSection">
   <div class="container blogs">
     {{#imageTwentysix text}}
     <h2>{{title}}</h2>
@@ -615,9 +705,195 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<section id="pricing" class="divider paddingSection">
+<section id="team" class="pb-5">
+  <div class="container">
+    <h5 class="section-title h1">OUR TEAM</h5>
+    <div class="row">
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip">
+          <div class="mainflip flip-0">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, optio!</p>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa praesentium
+                    facilis quidem optio totam qui eius dolorem? Commodi illum eaque ducimus provident dolorum, adipisci
+                    sint!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cum.</p>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia rem quos!
+                    Architecto, sed vel nostrum atque quia expedita quidem voluptate repudiandae molestiae. Corrupti,
+                    ad!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, labore?</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere optio nostrum
+                    quaerat numquam voluptatibus accusantium cupiditate! Doloremque aliquid cumque, illum nam nulla
+                    voluptatum modi optio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, amet.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi voluptatum aut
+                    blanditiis, saepe dolorem doloribus facere nesciunt praesentium fugit, nihil odio sunt eaque quod?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, molestiae!</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus itaque
+                    veniam laudantium numquam ullam, vero dicta iusto, dolorum, quasi in fuga placeat eum quod maiores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nostrum?</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptate
+                    assumenda, maiores soluta eos veniam distinctio itaque minus ipsam ut velit, asperiores numquam
+                    culpa possimus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+
+    </div>
+  </div>
+</section>
+<!--<section id="pricing" class="divider paddingSection">
   <div class="container">
     <div class="content-center">
       {{#imageTen text}}
@@ -663,7 +939,7 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 <section id="testimonials" class="divider paddingSection">
   <div class="container">

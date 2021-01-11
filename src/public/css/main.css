@@ -7,11 +7,18 @@
 body {
 	font-family: 'Titillium Web', sans-serif;
 	background-color: #e9e9e9;
-	
 }
 
 .logo2 {
 	width: 30%;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #080d15;
+	opacity: .5;
 }
 
 .slider {
@@ -26,6 +33,29 @@ body {
 	margin: 0 auto;
 	margin-bottom: -4px;
 	object-fit: cover;
+}
+
+.slider-details {
+	position: absolute;
+	top: 32%;
+	left: 32%;
+	z-index: 3;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
+}
+
+.slider-details h1 {
+	font-size: 4em;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.slider-details h3 {
+	color: #fff;
 }
 
 h1 {
@@ -61,7 +91,7 @@ a i {
 }
 
 .paddingSection {
-	padding: 100px 0;
+	padding: 40px 0;
 }
 
 .bg-light-grey {
@@ -143,51 +173,58 @@ a i {
 	outline: none;
 	box-shadow: none;
 }
-.menu-btn{
+
+.menu-btn {
 	position: absolute;
 	left: 300px;
 	top: 20px;
 	cursor: pointer;
 	font-size: 1.5rem;
 }
-.menu-btn i{
+
+.menu-btn i {
 	display: block;
 	width: 40px;
 	text-align: center;
 	font-size: 30px;
 }
-.nav-main ul{
+
+.nav-main ul {
 	display: block;
-
 }
-.nav-main ul li{
+
+.nav-main ul li {
 	padding: 10px;
-
 }
-.nav-brand{
+
+.nav-brand {
 	width: 50px;
 }
+
 .navbar {
 	background: white;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
 	min-height: 100px;
 	font-size: 17px;
-} 
+}
+
 #nav-menu {
 	position: fixed;
 	display: block;
 	width: 300px;
-	top: 0;  
-	left:-300px;
+	top: 0;
+	left: -300px;
 	background: rgb(182, 181, 181);
 	height: 100%;
 	opacity: .9;
 	transition: all 500ms linear;
 }
+
 #nav-menu.active {
 	left: 0;
 }
-#nav-menu li{
+
+#nav-menu li {
 	padding: 20px;
 	font-size: 14px;
 }
@@ -218,7 +255,8 @@ a i {
 	margin: 0 auto 60px auto;
 	text-align: center;
 }
-.content-center h2{
+
+.content-center h2 {
 	color: black;
 }
 
@@ -285,37 +323,41 @@ a i {
 	padding: 0 5px;
 }
 
-.news-cards{
+.news-cards {
 	margin-bottom: 80px;
 }
-.news-cards img{
+
+.news-cards img {
 	width: 16%;
-	}
-	.blogs h1 {
-		font-size: 20px;
-		color: black;
-	}
-	.blogs h2{
-		font-size: 48px;
-		color:black;
-		position: relative;
-		left: 33%;
-	}
-.blogs img{
+}
+
+.blogs h1 {
+	font-size: 20px;
+	color: black;
+}
+
+.blogs h2 {
+	font-size: 48px;
+	color: black;
+	position: relative;
+	left: 33%;
+}
+
+.blogs img {
 	width: 100%;
 	height: 180px;
 	object-fit: cover;
 }
+
 .plans2 {
 	position: relative;
 	padding: 10px;
 	border-radius: 2px;
 	min-width: 450px;
-	
 }
+
 .plan-light2 {
 	background-color: rgb(224, 224, 224);
-	
 }
 
 .pricing-container {
@@ -444,12 +486,11 @@ a i {
 	.portfolio-details h2 {
 		font-size: 32px;
 	}
-	#nav-menu{
+	#nav-menu {
 		width: 100%;
 		height: auto;
 		position: relative;
 	}
-	
 	.plans {
 		min-width: unset;
 		padding: 40px;
@@ -465,7 +506,7 @@ a i {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-	#nav-menu{
+	#nav-menu {
 		width: 100%;
 		height: auto;
 		position: relative;
@@ -476,7 +517,6 @@ a i {
 	.portfolio-details h2 {
 		font-size: 30px;
 	}
-	
 	.plans {
 		min-width: unset;
 		padding: 40px 20px;

@@ -25,6 +25,7 @@
     "admin-bro": "^3.2.5",
     "animate.css": "^4.1.1",
     "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.23.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",

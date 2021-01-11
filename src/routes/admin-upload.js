@@ -7,6 +7,14 @@ const { v4: uuidv4 } = require("uuid");
 const Image = require("../models/Image");
 const Text = require("../models/Text");
 
+const cloudinary = require("cloudinary");
+
+cloudinary.config({
+  cloud_name: "imageswebsite",
+  api_key: "453821328877436",
+  api_secret: "myJd22ppGhmGhdciKpUaxCgLBQQ",
+});
+const fs = require("fs-extra");
 const passport = require("passport");
 const { adminAuthenticated } = require("../helpers/authAdmin");
 
@@ -24,7 +32,7 @@ const upload = multer({
     const filetypes = /jpeg|jpg|png|gif/;
     const mimetype = filetypes.test(file.mimetype);
     const extname = filetypes.test(path.extname(file.originalname));
-   
+
     if (mimetype && extname) {
       return cb(null, true);
     }
@@ -39,14 +47,14 @@ const upload = multer({
 
 router.get("/upload/signin", async (req, res) => {
   const image = await Image.find();
-  res.render("admin/Signin",{image});
+  res.render("users/signin", { image });
 });
 
 router.post(
   "/upload/signin",
   passport.authenticate("login", {
     successRedirect: "/upload",
-    failureRedirect: "/admin/signin",
+    failureRedirect: "/users/signin",
     failureFlash: true,
   })
 );
@@ -82,11 +90,19 @@ router.put(
   },
   async (req, res) => {
     const { title, description } = req.body;
-
-    const path = "/img/uploads/" + req.file.filename;
-    await Image.findByIdAndUpdate(req.params.id, { title, description, path });
+    const result = await cloudinary.v2.uploader.upload(req.file.path);
+    //const path = "/img/uploads/" + req.file.filename;
+    const path = result.url;
+    const public_id = result.public_id;
+    await Image.findByIdAndUpdate(req.params.id, {
+      title,
+      description,
+      path,
+      public_id,
+    });
     req.flash("success_msg", "Image Updated Succesfully");
-    res.redirect("/");
+    await fs.unlink(req.file.path);
+    res.redirect("/upload");
   }
 );
 
@@ -98,7 +114,6 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/img", (req, res) => {
- 
   res.render("admin/img");
 });
 

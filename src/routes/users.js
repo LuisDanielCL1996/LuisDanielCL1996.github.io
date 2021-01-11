@@ -11,7 +11,7 @@ router.get('/users/signin',async (req,res) => {
 	res.render('users/signin',{image});
 }); 
 router.post('/users/signin', passport.authenticate('local', {
-	successRedirect: '/notes',
+	successRedirect: '/upload',
 	failureRedirect: '/users/signin',
 	failureFlash: true
 }));

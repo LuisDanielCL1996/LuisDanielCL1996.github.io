@@ -1,6 +1,6 @@
 <section class="slider">
   <ul class="slider1">
-    <li>
+    <!-- <li>
       <div style="width:100%;height:0;padding-bottom:43%;position:relative;">
         {{#imagethirtytwo text}}
         <iframe src="{{title}}" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed"
@@ -8,19 +8,83 @@
         </iframe>
         {{/imagethirtytwo}}
       </div>
+    </li> -->
+    <li>
+      <div class="slider-details">
+        <h1>We are creative</h1>
+        <h3>Get start your next awesome project</h3>
+      </div>
+      <div class="overlay"></div>
+      {{#imageThree image}}
+      <img src="{{path}}" alt="Slider Uno">
+      {{/imageThree}}
     </li>
-    {{#imageThree image}}
-    <li><img src="{{path}}" alt="Slider Uno"></li>
-    {{/imageThree}}
-    {{#imageFour image}}
-    <li><img src="{{path}}" alt="Slider dos"></li>
-    {{/imageFour}}
+
+
+    <li>
+      <div class="slider-details">
+        <h1>We are smart</h1>
+        <h3>Get start your next awesome project</h3>
+      </div>
+      <div class="overlay"></div>
+      {{#imageFour image}}
+      <img src="{{path}}" alt="Slider dos">
+      {{/imageFour}}
+    </li>
+
     {{#imageFive image}}
-    <li><img src="{{path}}" alt="Slider tres"></li>
+    <li>
+      <div class="slider-details">
+        <h1>We are amazing</h1>
+        <h3>Get start your next awesome project</h3>
+      </div>
+      <div class="overlay"></div>
+      <img src="{{path}}" alt="Slider tres">
+    </li>
     {{/imageFive}}
 
   </ul>
 </section>
+<!-- ======= About Us Section ======= -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="row no-gutters">
+      <div class="col-lg-6 video-box">
+         {{#imageThirteen image}}
+        <img src="{{path}}" class="img-fluid" alt="">
+         {{/imageThirteen}}
+        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+          data-autoplay="true"></a>
+      </div>
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="bx bx-fingerprint"></i></div>
+          <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+            occaecati cupiditate non provident</p>
+        </div>
+
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="bx bx-gift"></i></div>
+          <h4 class="title"><a href="">Nemo Enim</a></h4>
+          <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>                      <!-- End About Us Section -->
 
 
 <section id="portfolio" class="paddingSection">
@@ -45,6 +109,7 @@
               {{/imageOne}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageSix image}}
           <img src="{{path}}" alt="portfolio 1" class="img-fluid">
           {{/imageSix}}
@@ -63,6 +128,7 @@
               {{/imageTwo}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageSeven image}}
           <img src="{{path}}" alt="portfolio 2" class="img-fluid">
           {{/imageSeven}}
@@ -81,6 +147,7 @@
               {{/imageThree}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageEight image}}
           <img src="{{path}}" alt="portfolio 3" class="img-fluid">
           {{/imageEight}}
@@ -100,6 +167,7 @@
               {{/imageFour}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageNine image}}
           <img src="{{path}}" alt="portfolio 4" class="img-fluid">
           {{/imageNine}}
@@ -129,6 +197,7 @@
               {{/imageTwentytwo}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageTen image}}
           <img src="{{path}}" alt="portfolio 1" class="img-fluid">
           {{/imageTen}}
@@ -147,6 +216,7 @@
               {{/imageTwentythree}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageEleven image}}
           <img src="{{path}}" alt="portfolio 2" class="img-fluid">
           {{/imageEleven}}
@@ -165,6 +235,7 @@
               {{/imageTwentyfour}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageTwelve image}}
           <img src="{{path}}" alt="portfolio 3" class="img-fluid">
           {{/imageTwelve}}
@@ -184,6 +255,7 @@
               {{/imageTwentyfive}}
             </a>
           </div>
+          <div class="overlay"></div>
           {{#imageThirteen image}}
           <img src="{{path}}" alt="portfolio 4" class="img-fluid">
           {{/imageThirteen}}
@@ -398,7 +470,64 @@
   </div>
 </section>
 
-<section class="divider paddingSection">
+<section class="details-card">
+  <div class="container">
+    {{#imageTwentysix text}}
+    <h3>{{title}}</h3>
+    {{/imageTwentysix}}
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-content">
+          <div class="card-img">
+            {{#imageTwenty image}}
+            <img src="{{path}}" alt="">
+            {{/imageTwenty}}
+          </div>
+          <div class="card-desc">
+            {{#imageTwentyseven text}}
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{/imageTwentyseven }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-content">
+          <div class="card-img">
+            {{#imageTwentyone image}}
+            <img src="{{path}}" alt="">
+            {{/imageTwentyone}}
+          </div>
+          <div class="card-desc">
+            {{#imageTwentyeight text}}
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{/imageTwentyeight }}
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-content">
+          <div class="card-img">
+            {{#imageTwentytwo image}}
+            <img src="{{path}}" alt="">
+            {{/imageTwentytwo}}
+          </div>
+          <div class="card-desc">
+
+            {{#imageTwentynine text}}
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{/imageTwentynine }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section class="divider paddingSection">
   <div class="container blogs">
     {{#imageTwentysix text}}
     <h2>{{title}}</h2>
@@ -445,10 +574,196 @@
     </div>
 
   </div>
+</section> -->
+
+<section id="team" class="pb-5">
+  <div class="container">
+    <h5 class="section-title h1">OUR TEAM</h5>
+    <div class="row">
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip">
+          <div class="mainflip flip-0">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, optio!</p>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa praesentium
+                    facilis quidem optio totam qui eius dolorem? Commodi illum eaque ducimus provident dolorum, adipisci
+                    sint!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cum.</p>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo mollitia rem quos!
+                    Architecto, sed vel nostrum atque quia expedita quidem voluptate repudiandae molestiae. Corrupti,
+                    ad!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, labore?</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere optio nostrum
+                    quaerat numquam voluptatibus accusantium cupiditate! Doloremque aliquid cumque, illum nam nulla
+                    voluptatum modi optio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, amet.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi voluptatum aut
+                    blanditiis, saepe dolorem doloribus facere nesciunt praesentium fugit, nihil odio sunt eaque quod?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, molestiae!</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus itaque
+                    veniam laudantium numquam ullam, vero dicta iusto, dolorum, quasi in fuga placeat eum quod maiores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid"
+                      src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg" alt="card image">
+                  </p>
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nostrum?</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Sunlimetech</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptate
+                    assumenda, maiores soluta eos veniam distinctio itaque minus ipsam ut velit, asperiores numquam
+                    culpa possimus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+
+    </div>
+  </div>
 </section>
-
-
-<section class="divider paddingSection">
+<!-- Team -->
+<!--<section class="divider paddingSection">
   <div class="container">
     <div class="content-center">
       {{#imageTen text}}
@@ -494,7 +809,7 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 <section id="testimonials" class="divider paddingSection">
   <div class="container">
