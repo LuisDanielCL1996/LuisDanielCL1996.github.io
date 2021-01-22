@@ -327,7 +327,7 @@ const hbs = exphbs.create({
         }
       }
       return out;
-    },
+    }, 
     imageTwentyfour: function (value, options) {
       let out = "";
       for (let i = 0; i < value.length; i++) {
@@ -455,6 +455,7 @@ app.use((err, req, res, next) => {
     next();
   }
 });
+
 // Server init
 app.listen(app.get("port"), () => {
   console.log("Server on port", app.get("port"));

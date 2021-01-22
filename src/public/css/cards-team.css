@@ -1,40 +1,45 @@
 /* FontAwesome for working BootSnippet :> */
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
-
 .details-card {
-	background: #ecf0f1;
+    background: #ecf0f1;
 }
 
 .card-content {
-	background: #ffffff;
-	border: 4px;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    background: #ffffff;
+    border: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 }
 
 .card-img {
-	position: relative;
-	overflow: hidden;
-	border-radius: 0;
-	z-index: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    z-index: 1;
 }
 
 .card-img img {
-	width: 100%;
-	height: auto;
-    display: block;
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    width: 100%;
+    height: calc(30vh - 100px);
     object-fit: cover;
 }
 
+.card-img:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
 .card-desc {
-	padding: 1.25rem;
+    padding: 1.25rem;
 }
 
 .card-desc h1 {
-	color: #000000;
+    color: #000000;
     font-weight: 600;
     font-size: 1.5em;
     line-height: 1.3em;
@@ -44,28 +49,28 @@
 }
 
 .card-desc p {
-	color: #747373;
+    color: #747373;
     font-size: 14px;
-	font-weight: 400;
-	font-size: 1em;
-	line-height: 1.5;
-	margin: 0px;
-	margin-bottom: 20px;
-	padding: 0;
-	font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
-
 
 #team {
     background: #eee !important;
 }
-.btn-primary:hover,
-.btn-primary:focus {
+
+.btn-primary:hover, .btn-primary:focus {
     background-color: #108d6f;
     border-color: #108d6f;
     box-shadow: none;
     outline: none;
 }
+
 .btn-primary {
     color: #fff;
     background-color: #007b5e;
@@ -88,8 +93,7 @@ section .section-title {
     background: #ffffff;
 }
 
-.image-flip:hover .backside,
-.image-flip.hover .backside {
+.image-flip:hover .backside, .image-flip.hover .backside {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
@@ -98,8 +102,7 @@ section .section-title {
     border-radius: .25rem;
 }
 
-.image-flip:hover .frontside,
-.image-flip.hover .frontside {
+.image-flip:hover .frontside, .image-flip.hover .frontside {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -142,8 +145,7 @@ section .section-title {
     box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 }
 
-.frontside,
-.backside {
+.frontside, .backside {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
@@ -160,8 +162,7 @@ section .section-title {
     transform-style: preserve-3d;
 }
 
-.frontside .card,
-.backside .card {
+.frontside .card, .backside .card {
     min-height: 312px;
 }
 
@@ -170,8 +171,7 @@ section .section-title {
     color: #007b5e !important;
 }
 
-.frontside .card .card-title,
-.backside .card .card-title {
+.frontside .card .card-title, .backside .card .card-title {
     color: #007b5e !important;
 }
 
@@ -181,9 +181,14 @@ section .section-title {
     border-radius: 50%;
 }
 
-@media screen and (min-width: 980px){
-    .hero { width: 980px; }    
+@media screen and (min-width: 980px) {
+    .hero {
+        width: 980px;
+    }
 }
-@media screen and (max-width: 640px){
-    .hero h1 { font-size: 4em; }    
+
+@media screen and (max-width: 640px) {
+    .hero h1 {
+        font-size: 4em;
+    }
 }

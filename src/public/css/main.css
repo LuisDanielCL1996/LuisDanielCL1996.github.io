@@ -56,6 +56,53 @@ body {
 .slider-details h3 {
 	color: #fff;
 }
+/*--------------------------------------------------------------
+# About Lists
+--------------------------------------------------------------*/
+.about-lists {
+	
+	padding: 40px;
+	
+  }
+  
+  .about-lists .row {
+	 
+	overflow: hidden;
+  }
+  
+  .about-lists .content-item {
+	padding: 40px;
+	border-left: 1px solid #40729b;
+	border-bottom: 1px solid  #40729b;
+	margin: -1px;
+  }
+  
+  .about-lists .content-item span {
+	display: block;
+	font-size: 24px;
+	font-weight: 400;
+	color: white;
+  }
+  
+  .about-lists .content-item h4 {
+	font-size: 28px;
+	font-weight: 400;
+	padding: 0;
+	margin: 20px 0;
+  }
+  
+  .about-lists .content-item p {
+	color: #ffffff;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+	.about-lists .content-item {
+	  padding: 40px 0;
+	}
+  }
 
 h1 {
 	font-size: 66px;
@@ -210,10 +257,10 @@ a i {
 #nav-menu {
 	position: fixed;
 	display: block;
-	width: 300px;
+	width: 340px;
 	top: 0;
 	left: -300px;
-	background: rgb(182, 181, 181);
+	background: rgb(255, 255, 255);
 	height: 100%;
 	opacity: .9;
 	transition: all 500ms linear;

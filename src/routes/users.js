@@ -5,64 +5,68 @@ const User = require('../models/User');
 const Image = require("../models/Image");
 const passport = require('passport');
 
-router.get('/users/signin',async (req,res) => {
+router.get('/users/signin', async (req, res) => {
 	const image = await Image.find();
-	
-	res.render('users/signin',{image});
-}); 
+
+	res.render('users/signin', { image });
+});
+
+router.get('/users/signup', async (req, res) => {
+	const image = await Image.find();
+	res.render('users/signup', { image });
+});
+
+
 router.post('/users/signin', passport.authenticate('local', {
 	successRedirect: '/upload',
 	failureRedirect: '/users/signin',
 	failureFlash: true
 }));
 
-router.get('/users/signup',(req,res) => {
-	res.render('users/signup');
-});
 
-router.post('/users/signup', async (req,res) => {
+router.post('/users/signup', async (req, res) => {
 	const { name, email, password, confirm_password } = req.body;
-	const errors= [];
+	const errors = [];
 
-	if(name.length <=0){
-		errors.push({ text: 'Please Insert  your Name'});
+	if (name.length <= 0) {
+		errors.push({ text: 'Please Insert  your Name' });
 	}
-	if(email.length <=0){
-		errors.push({ text: 'Please Insert  your Email'});
+	if (email.length <= 0) {
+		errors.push({ text: 'Please Insert  your Email' });
 	}
-	if(password.length <=0){
-		errors.push({ text: 'Please Insert  your Password'});
+	if (password.length <= 0) {
+		errors.push({ text: 'Please Insert  your Password' });
 	}
-	if(confirm_password.length <=0){
-		errors.push({ text: 'Please Insert  the confirm Password'});
+	if (confirm_password.length <= 0) {
+		errors.push({ text: 'Please Insert  the confirm Password' });
 	} else {
 		if (password.length < 4) {
-		errors.push({ text: 'Password must be at least 4 characters'});
+			errors.push({ text: 'Password must be at least 4 characters' });
+		}
 	}
-	} 
 	if (password != confirm_password) {
-		errors.push({text: 'Password do not match'});
+		errors.push({ text: 'Password do not match' });
 	}
-	
-	if (errors.length > 0) {
-		res.render('users/signup', {errors, name, email, password, confirm_password});
-	} else	{
 
-		const emailUser = await User.findOne({email: email});
+	if (errors.length > 0) {
+		res.render('users/signup', { errors, name, email, password, confirm_password });
+	} else {
+
+		const emailUser = await User.findOne({ email: email });
 		if (emailUser) {
 			req.flash('error_msg', 'The Email is already in use');
 			res.redirect('/users/signup');
 		}
-		const newUser = new User({name, email, password});
-		 newUser.password = await newUser.encryptPassword(password);
-		await newUser.save();  
-		req.flash('success_msg','You are registered');
+		const newUser = new User({ name, email, password });
+		newUser.password = await newUser.encryptPassword(password);
+		await newUser.save();
+		req.flash('success_msg', 'You are registered');
 		res.redirect('/users/signin');
 	}
-	
+
 });
 
-router.get('/users/logout', (req,res) => {
+router.get('/users/logout', (req, res) => {
 	req.logout();
 	res.redirect('/');
 });

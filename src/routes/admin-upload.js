@@ -117,7 +117,7 @@ router.get("/img", (req, res) => {
   res.render("admin/img");
 });
 
-router.post("/img", upload, async (req, res) => {
+/* router.post("/img", upload, async (req, res) => {
   const image = new Image();
   image.title = req.body.title;
   image.description = req.body.description;
@@ -132,7 +132,7 @@ router.post("/img", upload, async (req, res) => {
   res.redirect("/");
 
   //ruta para guardar la imagen
-});
+}); */
 
 router.get("/upload/logout", (req, res) => {
   req.logout();
