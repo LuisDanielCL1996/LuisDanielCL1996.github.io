@@ -11,8 +11,10 @@
     </li> -->
     <li>
       <div class="slider-details">
-        <h1>We are creative</h1>
-        <h3>Get start your next awesome project</h3>
+        {{#imageFive text}}
+        <h1>{{title}}</h1>
+        <h3>{{description}}</h3>
+        {{/imageFive}}
       </div>
       <div class="overlay"></div>
       {{#imageThree image}}
@@ -23,8 +25,10 @@
 
     <li>
       <div class="slider-details">
-        <h1>We are smart</h1>
-        <h3>Get start your next awesome project</h3>
+        {{#imageTen text}}
+        <h1>{{title}}</h1>
+        <h3>{{description}}</h3>
+        {{/imageTen}}
       </div>
       <div class="overlay"></div>
       {{#imageFour image}}
@@ -32,62 +36,250 @@
       {{/imageFour}}
     </li>
 
-    {{#imageFive image}}
+
     <li>
       <div class="slider-details">
-        <h1>We are amazing</h1>
-        <h3>Get start your next awesome project</h3>
+        {{#imageEleven text}}
+        <h1>{{title}}</h1>
+        <h3>{{description}}</h3>
+        {{/imageEleven}}
       </div>
       <div class="overlay"></div>
+      {{#imageFive image}}
       <img src="{{path}}" alt="Slider tres">
+      {{/imageFive}}
     </li>
-    {{/imageFive}}
+
 
   </ul>
+</section>
+<section style="background-color: rgb(255, 255, 255);" class="paddingSection">
+  <div class="wrapper">
+
+    <div class="item-bg"></div>
+
+    <div class="news-slider">
+      <div class="news-slider__wrp swiper-wrapper">
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title" style="color: rgb(190, 190, 190);">24</span>
+              <span class="news-date__txt" style="color: rgb(190, 190, 190);">May</span>
+            </div>
+            <div class="news__title" style="color: rgb(190, 190, 190);">Lorem Ipsum Dolor Sit Amed</div>
+
+            <p class="news__txt">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s...
+            </p>
+
+            <div class="news__img">
+              <img src="https://res.cloudinary.com/imageswebsite/image/upload/v1607025931/yogcrg5kjm81vfx779ln.jpg"
+                alt="news" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title" style="color: rgb(190, 190, 190);">25</span>
+              <span class="news-date__txt" style="color: rgb(190, 190, 190);">May</span>
+            </div>
+            <div class="news__title" style="color: rgb(190, 190, 190);">Lorem Ipsum Dolor Sit Amed</div>
+
+            <p class="news__txt">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s...
+            </p>
+
+            <div class="news__img">
+              <img src="https://res.cloudinary.com/imageswebsite/image/upload/v1607026237/utoseevbtxkysr9wm3lx.jpg"
+                alt="news" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title" style="color: rgb(190, 190, 190);">26</span>
+              <span class="news-date__txt" style="color: rgb(190, 190, 190);">May</span>
+            </div>
+            <div class="news__title" style="color: rgb(190, 190, 190);">Lorem Ipsum Dolor Sit Amed</div>
+
+            <p class="news__txt">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s...
+            </p>
+
+            <div class="news__img">
+              <img src="https://res.cloudinary.com/imageswebsite/image/upload/v1607026202/ec3kvmxq6jtrwpeconz7.jpg"
+                alt="news" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title" style="color: rgb(190, 190, 190);">27</span>
+              <span class="news-date__txt" style="color: rgb(190, 190, 190);">May</span>
+            </div>
+            <div class="news__title" style="color: rgb(190, 190, 190);">Lorem Ipsum Dolor Sit Amed</div>
+
+            <p class="news__txt">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s...
+            </p>
+
+            <div class="news__img">
+              <img src="https://res.cloudinary.com/imageswebsite/image/upload/v1607026081/f5i1rs043xnumpjq3dkh.jpg"
+                alt="news" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title" style="color: rgb(190, 190, 190);">28</span>
+              <span class="news-date__txt" style="color: rgb(190, 190, 190);">May</span>
+            </div>
+            <div class="news__title" style="color: rgb(190, 190, 190);">Lorem Ipsum Dolor Sit Amed</div>
+
+            <p class="news__txt">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s...
+            </p>
+
+            <div class="news__img">
+              <img src="https://res.cloudinary.com/imageswebsite/image/upload/v1607021753/sample.jpg" alt="news" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide">
+          <a href="#" class="news__item">
+            <div class="news-date">
+              <span class="news-date__title" style="color: rgb(190, 190, 190);">29</span>
+              <span class="news-date__txt" style="color: rgb(190, 190, 190);">May</span>
+            </div>
+            <div class="news__title" style="color: rgb(190, 190, 190);">Lorem Ipsum Dolor Sit Amed</div>
+
+            <p class="news__txt">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s...
+            </p>
+
+            <div class="news__img">
+              <img src="https://res.cloudinary.com/imageswebsite/image/upload/v1607026286/q9orsvovn7gokpw5ff8j.jpg"
+                alt="news" />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="news-slider__ctr">
+        <div class="news-slider__arrows">
+          <button class="news-slider__arrow news-slider-prev">
+            <span class="icon-font">
+              <svg class="icon2 icon-arrow-left">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </span>
+          </button>
+          <button class="news-slider__arrow news-slider-next">
+            <span class="icon-font">
+              <svg class="icon2 icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="news-slider__pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <svg hidden="hidden">
+    <defs>
+      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+        <title>arrow-left</title>
+        <path
+          d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+        <title>arrow-right</title>
+        <path
+          d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
 </section>
 
 
 <!-- ======= About Lists Section ======= -->
-<section class="about-lists" style="background-color: #6490db;">
+<section class="about-lists" style="background-color: #000000;">
   <div class="container">
 
     <div class="row no-gutters">
 
       <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
         <span>01</span>
-        <h4>Lorem Ipsum</h4>
-        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+        {{#imageTwelve text}}
+        <h4>{{title}}</h4>
+        <p>{{description}}</p>
+        {{/imageTwelve}}
       </div>
 
       <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
         <span>02</span>
-        <h4>Repellat Nihil</h4>
-        <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+        {{#imageThirteen text}}
+        <h4>{{title}}</h4>
+        <p>{{description}}</p>
+        {{/imageThirteen}}
       </div>
 
       <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
         <span>03</span>
-        <h4> Ad ad velit qui</h4>
-        <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+        {{#imageFourteen text}}
+        <h4> {{title}}</h4>
+        <p>{{description}}</p>
+        {{/imageFourteen}}
       </div>
 
       <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
         <span>04</span>
-        <h4>Repellendus molestiae</h4>
-        <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
+        {{#imageFifteen text}}
+        <h4>{{title}}</h4>
+        <p>{{description}}</p>
+        {{/imageFifteen}}
       </div>
 
       <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
         <span>05</span>
-        <h4>Sapiente Magnam</h4>
-        <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+        {{#imageSixteen text}}
+        <h4>{{title}}</h4>
+        <p>{{description}}</p>
+        {{/imageSixteen}}
       </div>
 
       <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
         <span>06</span>
-        <h4>Facilis Impedit</h4>
-        <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis
-          sequi</p>
+        {{#imageSeventeen text}}
+        <h4>{{title}}</h4>
+        <p>{{description}}</p>
+        {{/imageSeventeen}}
       </div>
 
     </div>
@@ -104,11 +296,11 @@
       <div class="col-sm-3">
         <div class="card-content">
           <div class="card-img">
-           
+
             {{#imageSix image}}
             <img src="{{path}}" alt="">
             {{/imageSix}}
-            
+
           </div>
           <div class="card-desc">
             {{#imageOne text}}
@@ -121,7 +313,7 @@
       <div class="col-sm-3">
         <div class="card-content">
           <div class="card-img">
-            
+
             {{#imageSeven image}}
             <img src="{{path}}" alt="">
             {{/imageSeven}}
@@ -574,39 +766,45 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
         <div class="icon"><i class="icofont-computer"></i></div>
-        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-          occaecati cupiditate non provident</p>
+        {{#imageEightteen text}}
+        <h4 class="title"><a href="">{{title}}</a></h4>
+        <p class="description">{{description}}</p>
+        {{/imageEightteen}}
       </div>
       <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
         <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-        <h4 class="title"><a href="">Dolor Sitema</a></h4>
-        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat tarad limino ata</p>
+        {{#imageNineteen text}}
+        <h4 class="title"><a href="">{{title}}</a></h4>
+        <p class="description">{{description}}</p>
+        {{/imageNineteen}}
       </div>
       <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
         <div class="icon"><i class="icofont-earth"></i></div>
-        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur</p>
+        {{#imageTwenty text}}
+        <h4 class="title"><a href="">{{title}}</a></h4>
+        <p class="description">{{description}}</p>
+        {{/imageTwenty}}
       </div>
       <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
         <div class="icon"><i class="icofont-image"></i></div>
-        <h4 class="title"><a href="">Magni Dolores</a></h4>
-        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum</p>
+        {{#imageTwentyone text}}
+        <h4 class="title"><a href="">{{title}}</a></h4>
+        <p class="description">{{description}}</p>
+        {{/imageTwentyone}}
       </div>
       <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
         <div class="icon"><i class="icofont-settings"></i></div>
-        <h4 class="title"><a href="">Nemo Enim</a></h4>
-        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          voluptatum deleniti atque</p>
+        {{#imagethirtytwo text}}
+        <h4 class="title"><a href="">{{title}}</a></h4>
+        <p class="description">{{description}}</p>
+        {{/imagethirtytwo}}
       </div>
       <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
         <div class="icon"><i class="icofont-tasks-alt"></i></div>
-        <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
-          nobis est eligendi</p>
+        {{#imagethirtythree text}}
+        <h4 class="title"><a href="">{{title}}</a></h4>
+        <p class="description">{{description}}</p>
+        {{/imagethirtythree}}
       </div>
     </div>
 
@@ -1001,6 +1199,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 <!-- Team -->
 <!--<section class="divider paddingSection">
   <div class="container">
@@ -1050,7 +1252,7 @@
   </div>
 </section> -->
 
-<section id="testimonials" class="divider paddingSection">
+<!--<section id="testimonials" class="divider paddingSection">
   <div class="container">
     <div class="content-center">
       <h2>A few words from our clients...</h2>
@@ -1193,7 +1395,7 @@
 
     </div>
   </div>
-</section>
+</section>  -->
 
 <section id="contact" class="paddingSection">
   <div class="container">

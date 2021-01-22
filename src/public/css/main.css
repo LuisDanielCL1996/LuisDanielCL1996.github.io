@@ -29,80 +29,87 @@ body {
 	overflow: hidden;
 	width: 100%;
 	height: calc(100vh - 114px);
-	
-	
 	object-fit: cover;
 }
 
 .slider-details {
 	position: absolute;
-	top: 32%;
-	left: 32%;
+	top: 20%;
+	left: 12%;
 	z-index: 3;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
+	text-align: left;
+	
 }
 
 .slider-details h1 {
-	font-size: 4em;
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
 	color: #fff;
+	margin-bottom: 30px;
+	font-size: 48px;
+	font-weight: 900;
 }
 
 .slider-details h3 {
+	width: 80%;
 	color: #fff;
 }
+
+@media (max-width: 768px) {
+	.slider-details h1{
+		font-size: 28px;
+	}
+}
+@media (min-width: 1024px){
+	.slider-details h3 { 
+		width: 60%;
+	}
+}
+
 /*--------------------------------------------------------------
 # About Lists
 --------------------------------------------------------------*/
+
 .about-lists {
-	
 	padding: 40px;
-	
-  }
-  
-  .about-lists .row {
-	 
+}
+
+.about-lists .row {
 	overflow: hidden;
-  }
-  
-  .about-lists .content-item {
+}
+
+.about-lists .content-item {
 	padding: 40px;
-	border-left: 1px solid #40729b;
-	border-bottom: 1px solid  #40729b;
+	border-left: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
 	margin: -1px;
-  }
-  
-  .about-lists .content-item span {
+}
+
+.about-lists .content-item span {
 	display: block;
 	font-size: 24px;
 	font-weight: 400;
-	color: white;
-  }
-  
-  .about-lists .content-item h4 {
+	color: rgb(255, 255, 255);
+}
+
+.about-lists .content-item h4 {
 	font-size: 28px;
 	font-weight: 400;
 	padding: 0;
 	margin: 20px 0;
-  }
-  
-  .about-lists .content-item p {
-	color: #ffffff;
+	color:  rgb(255, 255, 255);
+}
+
+.about-lists .content-item p {
+	color:  rgb(255, 255, 255);
 	font-size: 15px;
 	margin: 0;
 	padding: 0;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
 	.about-lists .content-item {
-	  padding: 40px 0;
+		padding: 40px 0;
 	}
-  }
+}
 
 h1 {
 	font-size: 66px;
@@ -368,75 +375,82 @@ a i {
 .member-details i {
 	padding: 0 5px;
 }
+
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
+
 .counts {
 	padding-bottom: 30px;
-  }
-  .section-bg {
+}
+
+.section-bg {
 	background-color: #f5f9fc;
-  }
-  
-  .counts .count-box {
+}
+
+.counts .count-box {
 	box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
 	padding: 30px;
 	background: #fff;
 	margin-bottom: 30px;
-  }
-  
-  .counts .count-box i {
+}
+
+.counts .count-box i {
 	display: block;
 	font-size: 64px;
 	margin-bottom: 15px;
-  }
-  
-  .counts .count-box span {
+}
+
+.counts .count-box span {
 	font-size: 42px;
 	display: block;
 	font-weight: 700;
 	color: #1c5c93;
-  }
-  
-  .counts .count-box p {
+}
+
+.counts .count-box p {
 	padding: 0;
 	margin: 0;
 	font-family: "Raleway", sans-serif;
 	font-size: 14px;
-  }
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 .services {
 	padding-bottom: 30px;
-  }
-  .section-title {
+}
+
+.section-title {
 	text-align: center;
 	padding-bottom: 30px;
-  }
-  .section-title h2 {
+}
+
+.section-title h2 {
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 20px;
 	padding-bottom: 0;
-	color: #5c768d;
-  }
-  
-  .section-title p {
+	color: #19191a;
+}
+
+.section-title p {
 	margin-bottom: 0;
-  }
-  
-  .services .icon-box {
+}
+
+.services .icon-box {
 	margin-bottom: 20px;
 	text-align: center;
-  }
-  
-  .services .icon {
+}
+
+.services .icon {
 	display: flex;
 	justify-content: center;
-  }
-  
-  .services .icon i {
+}
+
+.services .icon i {
 	width: 80px;
 	height: 80px;
 	margin-bottom: 20px;
@@ -448,30 +462,30 @@ a i {
 	overflow: hidden;
 	padding-top: 20px;
 	box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .services .icon-box:hover .icon i {
+}
+
+.services .icon-box:hover .icon i {
 	box-shadow: 0px 0 30px rgba(66, 139, 202, 0.5);
-  }
-  
-  .services .title {
+}
+
+.services .title {
 	font-weight: 600;
 	margin-bottom: 15px;
 	font-size: 18px;
 	position: relative;
 	padding-bottom: 15px;
-  }
-  
-  .services .title a {
+}
+
+.services .title a {
 	color: #444;
 	transition: 0.3s;
-  }
-  
-  .services .title a:hover {
+}
+
+.services .title a:hover {
 	color: #428bca;
-  }
-  
-  .services .title::after {
+}
+
+.services .title::after {
 	content: '';
 	position: absolute;
 	display: block;
@@ -480,12 +494,12 @@ a i {
 	background: #428bca;
 	bottom: 0;
 	left: calc(50% - 25px);
-  }
-  
-  .services .description {
+}
+
+.services .description {
 	line-height: 24px;
 	font-size: 14px;
-  }
+}
 
 .news-cards {
 	margin-bottom: 80px;
@@ -493,16 +507,16 @@ a i {
 
 .news-cards img {
 	width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-  background: #fff;
-  border-radius: 50%;
-  transition: 0.5s;
-  color: #428bca;
-  font-size: 40px;
-  overflow: hidden;
-  padding-top: 20px;
-  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+	height: 80px;
+	margin-bottom: 20px;
+	background: #fff;
+	border-radius: 50%;
+	transition: 0.5s;
+	color: #428bca;
+	font-size: 40px;
+	overflow: hidden;
+	padding-top: 20px;
+	box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
 }
 
 .blogs h1 {
@@ -697,10 +711,6 @@ a i {
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	
-}
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 
-@media (min-width: 1200px) {
-	
-}
+@media (min-width: 1200px) {}

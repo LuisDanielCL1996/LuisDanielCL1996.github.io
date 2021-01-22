@@ -327,7 +327,7 @@ const hbs = exphbs.create({
         }
       }
       return out;
-    }, 
+    },
     imageTwentyfour: function (value, options) {
       let out = "";
       for (let i = 0; i < value.length; i++) {
@@ -404,6 +404,15 @@ const hbs = exphbs.create({
       let out = "";
       for (let i = 0; i < value.length; i++) {
         if (i == 32) {
+          out = out + options.fn(value[i]);
+        }
+      }
+      return out;
+    },
+    imagethirtythree: function (value, options) {
+      let out = "";
+      for (let i = 0; i < value.length; i++) {
+        if (i == 33) {
           out = out + options.fn(value[i]);
         }
       }
